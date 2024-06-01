@@ -19,7 +19,7 @@ async function writeUserData(chatroom, name, timestamp, message) {
   try {
     let time= getTimeForDataBase(timestamp)
     let timeName= time+name
-    set(ref(db, 'chatroom/' + timeName), {
+    set(ref(db, chatroom+'/' + timeName), {
       name: name,
       timestamp: timestamp,
       message: message
@@ -30,7 +30,8 @@ async function writeUserData(chatroom, name, timestamp, message) {
 }
 
 function readUserData(chatroom) {
-  const userRef = ref(db, 'chatroom/' + chatroom);
+  console.log("chatroom is "+chatroom)
+  const userRef = ref(db, chatroom+'/' );
   
   // Return a promise
   return get(userRef)
@@ -83,7 +84,7 @@ async function displayMessage2(sender, message, timestamp) {
 
 async function displayMessage(sender, message, timestamp) {
   console.log("Fetching messages...");
-  let data = await readUserData("");
+  let data = await readUserData(chatroom);
 
   if (data) {
       console.log("Messages data:", data);
