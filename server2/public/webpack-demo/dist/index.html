@@ -38,8 +38,13 @@
             font-size: 12px;
             color: #666;
         }
+        .message img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
         .input-container {
             display: flex;
+            align-items: center;
         }
         .input-container input[type="text"] {
             flex: 1;
@@ -47,6 +52,9 @@
             border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 16px;
+            margin-right: 10px;
+        }
+        .input-container input[type="file"] {
             margin-right: 10px;
         }
         .input-container input[type="submit"] {
@@ -67,6 +75,7 @@
         </div>
         <div class="input-container">
             <input type="text" id="messageInput" placeholder="Type your message...">
+            <input type="file" id="imageInput" accept="image/*">
             <input type="submit" value="Send" onclick="sendMessage2()">
         </div>
     </div>

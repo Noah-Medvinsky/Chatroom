@@ -31,7 +31,7 @@ app.post('/form', async (req, res) => {
       try{
         let result = await firebase.readUserData(username, password);
         if(result){
-          res.redirect(`/createRoom.html?username=${username}`);
+          res.redirect(`./createRoom.html?username=${username}`);
         } else{
           console.error("Error in user registration:", error);
           res.status(500).send('Your Username or Password is incorrect.');
@@ -46,7 +46,7 @@ app.post('/form', async (req, res) => {
     if(email){
     await firebase.writeUserData(username, username, email, password);
     // Send a success response
-    res.redirect(`/createRoom.html?username=${username}`);
+    res.redirect(`./createRoom.html?username=${username}`);
     }
   } catch  {
     
