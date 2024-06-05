@@ -14,3 +14,5 @@ How to install:
 
 The files we used to test include BLACK BOX TESTING Chatroom.txt, testFirebase.js (these two are in the root directory) and index.test.js which is under Chatroom/server2/public/webpack-demo
 /src/
+
+One final Note: You are able to send pictures, however you are not able to send files
