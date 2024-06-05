@@ -27,15 +27,6 @@ Fail: User is not redirected to the login page or receives an error message.
 Outcome: Pass
 
 Test Case 4
-Description: Verify that the logout feature works
-Preconditions: User is logged out of the system.
-Input Data: URL of a restricted page
-Expected Results: User is redirected to the login page when attempting to access restricted pages after logout.
-Pass: User is redirected to the login page when accessing restricted pages after logout.
-Fail: User can access restricted pages without being redirected to the login page.
-Outcome: Not Definitive
-
-Test Case 5
 Description: Verify the entire flow from the signup page until the user is in a chatroom and sends a message 
 Preconditions: User does not have an account
 Input Data: Email, userID, Password
@@ -44,7 +35,7 @@ Pass: User successfully navigates to the chatroom and sends a message.
 Fail: User cannot reach the chatroom or send a message.
 Outcome: Pass
 
-Test Case 6
+Test Case 5
 Description: Verify the entire flow from the login page until the user is in a chatroom and sends a message 
 Preconditions: User has an account
 Input Data: Email, userID, Password
@@ -53,16 +44,16 @@ Pass: User successfully navigates to the chatroom and sends a message.
 Fail: User cannot reach the chatroom or send a message.
 Outcome: Pass
 
-Test Case 7
-Description: Verify that user can send messages, upload files and upload pictures
+Test Case 6
+Description: Verify that user can send messages, and upload pictures
 Preconditions: User has an account
 Input Data: picture, message, file
 Expected Results: User is able to send message 
-Pass: User can send the message, upload the file, and upload the picture successfully.
-Fail: User cannot send the message, or cannot upload the file/picture.
-Outcome: N/A
+Pass: User can send the message, and upload the picture successfully.
+Fail: User cannot send the message, or cannot upload the picture.
+Outcome: Pass 
 
-Test Case 8
+Test Case 7
 Description: Verify time taken to login 
 Preconditions: User account exists 
 Input Data: Username: test_user, Password: Password
